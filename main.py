@@ -32,7 +32,6 @@ class CalculatorApp(App):
 
     def calc_result(self, instance):
         try:
-            # Обработка выражения с использованием безопасной функции eval
             self.formula = str(eval(self.formula))
             self.update_label()
         except Exception as e:
@@ -40,7 +39,6 @@ class CalculatorApp(App):
             self.update_label()
 
     def clear(self):
-        # Сброс к начальному состоянию
         self.formula = '0'
         self.update_label()
 
